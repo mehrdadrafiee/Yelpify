@@ -1,1 +1,13 @@
 @import 'ember-paper';
+
+@import "ember-bootstrap/bootstrap";
+
+
+body {
+  padding-bottom: 70px;
+}
+
+.md-checkbox,
+.md-button.md-primary.md-raised {
+  margin: 0;
+}

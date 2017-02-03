@@ -1,1 +1,56 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Yelpify</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown-menu" role="button" aria-haspopup="true" aria-expanded="false">{{user}}
+            <span class="lnr lnr-chevron-down"></span>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li class="dropdown-header">Nav header</li>
+            <li><a href="#">Separated link</a></li>
+            <li><a href="#">One more separated link</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container-fluid -->
+</nav>
 
+<div class="col-md-3">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Friends</h3>
+    </div>
+    <ul class="list-group">
+      <li class="list-group-item">{{#paper-checkbox onChange=null}}Alex Neimi{{/paper-checkbox}}</li>
+      <li class="list-group-item">{{#paper-checkbox onChange=null}}Jack Friend{{/paper-checkbox}}</li>
+      <li class="list-group-item">{{#paper-checkbox onChange=null}}Adam Machenta{{/paper-checkbox}}</li>
+      <li class="list-group-item">{{#paper-checkbox onChange=null}}Yahuda Katz{{/paper-checkbox}}</li>
+    </ul>
+    <div class="panel-footer">
+      {{#paper-button disabled=isDisabled raised=true primary=true action="sendInvitation" target=component}}Send Invitation{{/paper-button}}
+    </div>
+  </div>
+</div>
+<div class="col-md-9">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Map</h3>
+    </div>
+  </div>
+  {{outlet}}
+</div>
